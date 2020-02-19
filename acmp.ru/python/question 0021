@@ -1,0 +1,15 @@
+a,b,c=map(int,input().split())
+if(a>=b>=c):
+    d=a-c
+elif(a>=c>=b):
+    d=a-b
+elif(b>=a>=c):
+    d=b-c
+elif(b>=c>=a):
+    d=b-a
+elif(c>=a>=b):
+    d=c-b
+else:
+    d=c-a
+print(d)
+
