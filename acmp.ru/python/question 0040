@@ -1,0 +1,4 @@
+a=int(input())
+if(0<a<1000):
+    b=2**a
+    print(b)
