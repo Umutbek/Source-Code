@@ -1,0 +1,14 @@
+a,b,c=map(int,input().split())
+x,y,z=map(int,input().split())
+m=(a*b//100)*c
+n=(x*y//100)*z
+a=a-(a*b//100)
+x=x-(x*y//100)
+if a>=x:
+    d=a-x
+    d=d*c
+    print(m+n+d)
+else:
+    f=x-a
+    f=f*z
+    print(m+n+f)
