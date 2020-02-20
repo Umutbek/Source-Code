@@ -1,0 +1,14 @@
+a=int(input())
+b=1
+c=0
+d=0
+e=[]
+while d<a:
+    if d%2==0:
+        b=b+c
+        e.append(b)
+    if d%2==1:
+        c=b+c
+        e.append(c)
+    d=d+1
+print(e[-1])
