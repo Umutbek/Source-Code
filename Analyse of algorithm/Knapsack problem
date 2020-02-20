@@ -1,0 +1,45 @@
+#include<stdio.h>
+int max(int,int);
+int main(){
+  int items=3,capacity=4,i,j;
+  int my_arr[items][capacity],w[3]={1,2,3},v[3]={6,9,18};
+  for(i=0;i<=capacity;i++){
+    for(j=0;j<=items;j++){
+      if(i==0 ||j==0){
+          my_arr[i][j]=0;
+      }
+    }
+  }
+  int cap=i+1,set=j+1;
+  for(cap=1;cap<=capacity;cap++){
+    for(set=1;set<=items;set++){
+      if(cap-w[set-1]<0){
+        my_arr[cap][set]=my_arr[cap][set-1];
+      }
+      else{
+        my_arr[cap][set]=max(my_arr[cap][set-1],my_arr[cap-w[set-1]][set-1]+v[set-1]);
+      }
+    }
+  }
+  for(i=0;i<=capacity;i++){
+    for(j=0;j<=items;j++){
+        printf("%d ",my_arr[i][j]);
+    }
+    printf("\n");
+  }
+  printf("\n\n");
+  printf("Max value is:%d\n\n",my_arr[capacity][items]);
+  while(capacity>0 || items>0){
+    if(my_arr[capacity][items]!=my_arr[capacity][items-1]){
+      printf("Item %d selected!!!\n",my_arr[capacity][items]);
+      capacity-=w[items-1];
+      items--;
+    }
+    else
+    items--;
+  }
+  return 0;
+}
+int max(int a,int b){
+  return (a>b)?a:b;
+}
