@@ -1,0 +1,20 @@
+#include"stdio.h"
+int main()
+{
+  int b;
+  char a;
+  scanf("%c%d",&a,&b);
+  if(a==65||a==67||a==69||a==71){
+    if(b%2==1)
+    printf("BLACK");
+    else
+    printf("WHITE");
+  }
+  if(a==66||a==68||a==70||a==72){
+    if(b%2==0)
+    printf("BLACK");
+    else
+    printf("WHITE");
+  }
+  return 0;
+}
