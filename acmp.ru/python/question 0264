@@ -1,0 +1,17 @@
+a=int(input())
+x=0
+y=0
+list=[]
+for i in range(a):
+    b=int(input())
+    list.append(b)
+    if list[i]>=0:
+        x+=1
+        if (x>y):
+            y=x
+    if(list[i]<0):
+        x=0
+if y<=1:
+    print(0)
+else:
+    print(y)
