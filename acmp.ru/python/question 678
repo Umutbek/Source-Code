@@ -1,0 +1,16 @@
+a=input()
+my_list=['A','B','C']
+for i in a:
+    if i=='A':
+        d=my_list[1]
+        my_list[1]=my_list[0]
+        my_list[0]=d
+    elif i=='B':
+        d=my_list[2]
+        my_list[2]=my_list[1]
+        my_list[1]=d
+    elif i=='C':
+        d=my_list[2]
+        my_list[2]=my_list[0]
+        my_list[0]=d
+print(my_list.index('A')+1)
