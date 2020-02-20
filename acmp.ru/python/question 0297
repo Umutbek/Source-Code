@@ -1,0 +1,16 @@
+num=int(input("Enter a number:"))
+my_list=[]
+while(num>0):
+    remainder=num%10
+    my_list.append(remainder)
+    num//=10
+count1=0
+if 0 in my_list:
+    count1+=my_list.count(0)
+if 6 in my_list:
+    count1+=my_list.count(6)
+if 8 in my_list:
+    count1+=2*my_list.count(8)
+if 9 in my_list:
+    count1+=my_list.count(9)
+print(count1)
