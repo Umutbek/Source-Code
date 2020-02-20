@@ -1,0 +1,12 @@
+a,b,c=map(int,input().split())
+if a<=100 and b!=c:
+    if(b<c):
+        x=c-b-1
+        y=a+b-c-1
+        print(min(x,y))
+    elif(c<b):
+        x=b-c-1
+        y=a+c-b-1
+        print(min(x,y))
+
+
