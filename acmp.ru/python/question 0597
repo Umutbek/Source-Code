@@ -1,0 +1,9 @@
+a,b,c=map(int,input().split())
+if(1<=a and b and c<=10**9):
+    if(b+c<=a):
+        print("YES")
+    else:
+        print("NO")
+
+
+
