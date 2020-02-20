@@ -1,0 +1,11 @@
+a,b=map(int,input().split())
+k=a+b-1
+a=k-a
+b=k-b
+print(a,b)
+
+
+
+
+
+
