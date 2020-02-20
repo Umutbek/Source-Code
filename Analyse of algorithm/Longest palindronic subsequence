@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int max(int,int);
+int main(){
+  char my_string[20];
+  int my_array[20][20],length;
+  printf("Enter your string:");
+  scanf("%s",my_string);
+  length=strlen(my_string);
+  for(int i=0;i<length;i++){
+    for(int j=i;j<length;j++){
+      if(i==j)
+      my_array[i][j]=1;
+      else
+      break;
+    }
+  }
+  for(int m=0;m<length;m++){
+    int i=0;
+    for(int j=m+1;j<length;j++){
+      if(my_string[i]!=my_string[j]){
+        my_array[i][j]=max(my_array[i+1][j],my_array[i][j-1]);
+        my_array[j][i]=my_array[i][j];
+      }
+      else if((my_string[i]==my_string[j]) && j==(i+1)){
+        my_array[i][j]=2;
+        my_array[j][i]=my_array[i][j];
+      }
+      else{
+        my_array[i][j]=my_array[i+1][j-1]+2;
+        my_array[j][i]=my_array[i][j];
+      }
+      i++;
+    }
+  }
+  for(int i=0;i<length;i++){
+    for(int j=0;j<length;j++){
+      printf("%d ",my_array[i][j]);
+    }
+    printf("\n");
+  }
+  printf("The length of LPS is %d:\n",my_array[0][length-1]);
+  int lps=my_array[0][length-1],i=0,j=0,m=length;
+  while(lps>0){
+    if(my_string[j]==my_string[m-1])
+    printf("%c",my_string[i]);
+    else if(my_array[i][length-2]!=my_array[i+1][length-1]){
+      printf("%c",my_string[i+1]);
+      length--;
+    }
+    else{
+      printf("%c",my_string[i+1]);
+    }
+    i++;
+    lps--;
+  }
+
+
+  return 0;
+}
+int max(int a,int b){
+  return a>b?a:b;
+}
