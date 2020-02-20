@@ -1,0 +1,10 @@
+a=int(input())
+c=[]
+for i in range(6):
+    b=a%10
+    c.append(b)
+    a=a//10
+if(c[0]+c[1]+c[2]==c[3]+c[4]+c[5]):
+    print("YES")
+else:
+    print("NO")
