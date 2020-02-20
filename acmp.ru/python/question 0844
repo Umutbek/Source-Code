@@ -1,0 +1,10 @@
+import math
+a,b=map(int,input().split())
+area=a*b
+c=(math.sqrt(area))
+d=round(c)
+if (d-c!=0):
+    print(0)
+else:
+    print (int(c))
+
