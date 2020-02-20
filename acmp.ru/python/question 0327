@@ -1,0 +1,33 @@
+a=int(input())
+m=[]
+c=[]
+d=[]
+for i in range(a):
+    b=int(input())
+    x=b+1
+    y=b-1
+    for i in range(6):
+        remainder=b%10
+        m.append(remainder)
+        b//=10
+        r=x%10
+        c.append(r)
+        x//=10
+        n=y%10
+        d.append(n)
+        y//=10
+    m.reverse()
+    c.reverse()
+    d.reverse()
+    u=m[0]+m[1]+m[2]
+    um=m[3]+m[4]+m[5]
+    u1=c[0]+c[1]+c[2]
+    um1=c[3]+c[4]+c[5]
+    u2=d[0]+d[1]+d[2]
+    um2=d[3]+d[4]+d[5]
+
+    if (abs(u-um==1)or abs(um-u==1))and u1==um1 or u2==um2:
+        print("Yes")
+    else:
+        print("No")
+
