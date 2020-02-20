@@ -1,0 +1,12 @@
+a=int(input())
+x=a//6
+y=x
+z=(2*x)+(2*y)
+print(x,z,y)
+
+
+
+
+
+
+
