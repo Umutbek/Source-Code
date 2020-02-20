@@ -1,0 +1,9 @@
+a,b,c,d,e,f=map(int,input().split())
+my_list=[]
+my_list1=[]
+my_list.extend([a,c,e])
+my_list1.extend([b,d,f])
+x=max(my_list)-min(my_list)
+y=max(my_list1)-min(my_list1)
+print((x*y)/2)
+
