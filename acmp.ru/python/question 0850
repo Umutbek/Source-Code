@@ -1,0 +1,6 @@
+a,b=map(int,input("Enter your numbers:").split())
+maxa=a
+mina=(a+1)//2
+maxb=b
+minb=(b+1)//2
+print(max(mina,minb),min(maxa,maxb))
