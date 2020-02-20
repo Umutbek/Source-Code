@@ -1,0 +1,10 @@
+import math
+a,b,c=map(int,input().split())
+x,y,z=map(int,input().split())
+m=(a-x)*(a-x)
+n=(b-y)*(b-y)
+u=math.sqrt(m+n)
+if(u<=c+z and u>=abs(c-z)):
+    print("YES")
+else:
+    print("NO")
