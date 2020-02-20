@@ -1,0 +1,11 @@
+#include"stdio.h"
+int main()
+{
+  int num;
+  scanf("%d",&num);
+  if(num==1 || num==2 || num==4 || num==8 || num==16 || num==32 || num==64 || num==128 || num==256 || num==512 || num==1024 || num==2048 || num==4096 || num==8192 )
+  printf("YES");
+  else
+  printf("NO");
+  return 0;
+}
