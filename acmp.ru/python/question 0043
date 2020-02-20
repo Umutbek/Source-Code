@@ -1,0 +1,12 @@
+string=input()
+a=0
+p=0
+for i in range(len(string)):
+    if string[i]=='0':
+        a+=1
+        if (a>p):
+            p=a
+    if(string[i]=='1'):
+        a=0
+print(p)
+
